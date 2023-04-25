@@ -57,9 +57,45 @@ form {
 
 .main-header__item {
   margin: 0 1rem;
-  padding: 0;
+
+  /* position: relative; */
+}
+ul {
+  list-style: none;
+  background: white;
+  border-radius: 5px;
+  padding: 0%;
 }
 
+ul li {
+  display: inline-block;
+  position: relative;
+}
+ul li a {
+  display: block;
+  text-decoration: none;
+  text-align: left;
+}
+ul li ul.dropdown li {
+  display: block;
+  margin: 15px;
+}
+ul li ul.dropdown {
+  width: 100%;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+ul li a:hover {
+  background: white;
+}
+ul li:hover ul.dropdown {
+  display: block;
+}
+ul.dropdown {
+  background-color: white;
+  height: 300px;
+}
 .main-header__item a,
 .main-header__item button {
   font: icon;

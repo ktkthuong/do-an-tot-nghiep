@@ -16,6 +16,7 @@ const errorController = require("./controllers/error");
 
 const mongoose = require("mongoose");
 const Staff = require("./models/staff");
+const dropdown = require("./models/dropdown");
 // const mainRoutes = require("./routes/navdrop");
 const MONGODB_URI =
   "mongodb+srv://ktkthuong:30062010phat@cluster0.i5p9i.mongodb.net/appmomo?retryWrites=true&w=majority";
@@ -111,7 +112,17 @@ app.use(adminRoutes);
 app.use(authRoutes);
 app.use(errorController.get404);
 // app.use(mainRoutes);
-
+app.get("/", (req, res) => {
+  const dropdown = [
+    "Vì trẻ em",
+    "Vì người già, người khuyết tật",
+    "Bệnh hiểm nghèo",
+    "Hoàn cảnh khó khăn",
+    "Hỗ trợ giáo dục",
+    "Bảo vệ môi trường",
+  ];
+  res.render("navigation", { dropdown });
+});
 //Doan code nay dung de tao user test - start
 mongoose
   .connect(MONGODB_URI)
