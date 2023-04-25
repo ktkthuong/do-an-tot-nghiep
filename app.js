@@ -16,7 +16,7 @@ const errorController = require("./controllers/error");
 
 const mongoose = require("mongoose");
 const Staff = require("./models/staff");
-
+// const mainRoutes = require("./routes/navdrop");
 const MONGODB_URI =
   "mongodb+srv://ktkthuong:30062010phat@cluster0.i5p9i.mongodb.net/appmomo?retryWrites=true&w=majority";
 
@@ -110,6 +110,8 @@ app.use(adminRoutes);
 // app.use(staffRoutes);
 app.use(authRoutes);
 app.use(errorController.get404);
+// app.use(mainRoutes);
+
 //Doan code nay dung de tao user test - start
 mongoose
   .connect(MONGODB_URI)
@@ -171,3 +173,5 @@ mongoose
 app.listen(process.env.PORT || 3000, "0.0.0.0", () => {
   console.log("Connect with mongoBD");
 });
+
+//git test again

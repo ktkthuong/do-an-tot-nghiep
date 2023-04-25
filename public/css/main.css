@@ -34,7 +34,7 @@ form {
 .main-header {
   width: 100%;
   height: 3.5rem;
-  background-color: #00695c;
+  background-color: white;
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
@@ -62,11 +62,12 @@ form {
 
 .main-header__item a,
 .main-header__item button {
-  font: inherit;
+  font: icon;
+  font-size: 19px;
   background: transparent;
   border: none;
   text-decoration: none;
-  color: white;
+  color: blue;
   cursor: pointer;
 }
 
@@ -201,8 +202,8 @@ form {
   padding: 0.25rem 1rem;
   text-decoration: none;
   font: inherit;
-  border: 1px solid #00695c;
-  color: #00695c;
+  border: 1px solid #690056;
+  color: #690056;
   background: white;
   border-radius: 3px;
   cursor: pointer;
@@ -210,7 +211,7 @@ form {
 
 .btn:hover,
 .btn:active {
-  background-color: #00695c;
+  background-color: #670069;
   color: white;
 }
 
@@ -251,14 +252,14 @@ form {
   text-decoration: none;
   color: #00695c;
   padding: 0.5rem;
-  border: 1px solid #00695c;
+  border: 1px solid #660069;
   margin: 0 1rem;
 }
 
 .pagination a:hover,
 .pagination a:active,
 .pagination a.active {
-  background-color: #00695c;
+  background-color: #660069;
   color: white;
 }
 
